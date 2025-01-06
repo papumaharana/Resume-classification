@@ -7,3 +7,5 @@ PyPDF2
 python-docx
 scikit-learn
 imblearn
+# Install the en_core_web_sm model
+spacy download en_core_web_sm
