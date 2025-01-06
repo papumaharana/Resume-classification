@@ -1,0 +1,7 @@
+streamlit
+pandas
+numpy
+spacy
+nltk
+PyPDF2
+python-docx
