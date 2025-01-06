@@ -7,4 +7,3 @@ PyPDF2
 python-docx
 scikit-learn
 imblearn
-en-core-web-sm
