@@ -1,4 +1,4 @@
-streamlit
+streamlit>=1.41.1
 pandas
 numpy
 matplotlib
@@ -11,4 +11,4 @@ imblearn
 wordcloud
 PyPDF2
 python-docx
-win32com
+tqdm
