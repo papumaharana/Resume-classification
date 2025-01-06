@@ -24,7 +24,7 @@ import streamlit as st
 # In[102]:
 
 
-model = pickle.load(open('model_Gb.pkl', 'rb'))
+model = pickle.load(open('deploy/model_Gb.pkl', 'rb'))
 
 
 # ## Creating some functions to extract data from uploaded resume file:
