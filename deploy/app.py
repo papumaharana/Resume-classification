@@ -18,18 +18,6 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-##########################
-## some codes that shows error during deploying codes to streamlit cloud
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    # If the model is not found, download it
-    from spacy.cli import download
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
-###########################
-
-
 # ## Import models:
 
 # In[102]:
