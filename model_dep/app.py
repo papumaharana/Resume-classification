@@ -18,30 +18,22 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-## For deployment error resolving
-# Ensure 'en_core_web_sm' is installed
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    print("Downloading 'en_core_web_sm' model...")
-    subprocess.run(["bash", "setup.sh"], shell=True)
-    nlp = spacy.load("en_core_web_sm")
-
 
 # ## Import models:
 
 # In[102]:
 
-import joblib
-model = joblib.load("model_dep/model_Gb.pkl")
 
-# model = pickle.load(open('model_dep/model_Gb.pkl', 'rb'))
+model = pickle.load(open('model_Gb.pkl', 'rb'))
 
 
 # ## Creating some functions to extract data from uploaded resume file:
 
 # In[120]:
 
+
+## Creating function for extract data with cleaned text:
+nlp = spacy.load('en_core_web_sm')
 
 ## function for data cleaning:
 def clean_data(text):
