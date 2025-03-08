@@ -19,16 +19,12 @@ import pandas as pd
 import streamlit as st
 
 ## For deployment error resolving
-import spacy
-import os
-import subprocess
-
-# Check if en_core_web_sm is installed, if not, install it
+# Ensure 'en_core_web_sm' is installed
 try:
     nlp = spacy.load("en_core_web_sm")
 except OSError:
     print("Downloading 'en_core_web_sm' model...")
-    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+    subprocess.run(["bash", "setup.sh"], shell=True)
     nlp = spacy.load("en_core_web_sm")
 
 
@@ -44,9 +40,6 @@ model = pickle.load(open('model_dep/model_Gb.pkl', 'rb'))
 
 # In[120]:
 
-
-## Creating function for extract data with cleaned text:
-nlp = spacy.load('en_core_web_sm')
 
 ## function for data cleaning:
 def clean_data(text):
