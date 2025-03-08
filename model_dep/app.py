@@ -32,8 +32,10 @@ except OSError:
 
 # In[102]:
 
+import joblib
+model = joblib.load("model_dep/model_Gb.pkl")
 
-model = pickle.load(open('model_dep/model_Gb.pkl', 'rb'))
+# model = pickle.load(open('model_dep/model_Gb.pkl', 'rb'))
 
 
 # ## Creating some functions to extract data from uploaded resume file:
