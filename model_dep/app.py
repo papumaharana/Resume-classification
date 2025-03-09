@@ -39,9 +39,16 @@ model = pickle.load(open(model_path, "rb"))
 
 # In[120]:
 
+# Auto-download model if not found
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    os.system("python -m spacy download en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 
 ## Creating function for extract data with cleaned text:
-nlp = spacy.load('en_core_web_sm')
+# nlp = spacy.load('en_core_web_sm')
 
 ## function for data cleaning:
 def clean_data(text):
