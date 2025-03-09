@@ -23,8 +23,16 @@ import streamlit as st
 
 # In[102]:
 
+# Get the absolute path of the current script
+base_path = os.path.dirname(__file__)  # This is "/mount/src/focusing_web_or_app/model_dep"
 
-model = pickle.load(open('model_Gb.pkl', 'rb'))
+# Construct correct paths to model and scalers
+model_path = os.path.join(base_path, "model_Gb.pkl")
+
+# Load the model and scalers
+model = pickle.load(open(model_path, "rb"))
+
+# model = pickle.load(open('model_Gb.pkl', 'rb'))
 
 
 # ## Creating some functions to extract data from uploaded resume file:
